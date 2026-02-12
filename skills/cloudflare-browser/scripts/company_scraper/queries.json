@@ -1,0 +1,49 @@
+{
+  "queries": [
+    {
+      "name": "Large Engineering Teams - Senior Full Stack",
+      "enabled": true,
+      "schedule": "daily",
+      "theirstack_request": {
+        "limit": 25,
+        "order_by": [
+          { "field": "num_jobs", "desc": true }
+        ],
+        "min_employee_count": 50,
+        "company_technology_slug_or": ["react", "typescript", "node-js"],
+        "job_filters": {
+          "job_title_pattern_or": ["Full Stack", "Software Engineer"],
+          "job_seniority_or": ["senior", "staff"],
+          "posted_at_max_age_days": 30
+        }
+      }
+    },
+    {
+      "name": "AI/ML Companies - Senior Engineers",
+      "enabled": true,
+      "schedule": "weekly",
+      "theirstack_request": {
+        "limit": 25,
+        "company_technology_slug_or": ["tensorflow", "pytorch"],
+        "job_filters": {
+          "job_title_pattern_or": ["ML Engineer", "AI Engineer", "Machine Learning"],
+          "job_seniority_or": ["senior", "staff", "mid_level"],
+          "job_description_pattern_or": ["machine learning", "deep learning", "neural network"]
+        }
+      }
+    },
+    {
+      "name": "YC Companies - Mobile Engineers",
+      "enabled": false,
+      "schedule": "weekly",
+      "theirstack_request": {
+        "limit": 25,
+        "only_yc_companies": true,
+        "company_technology_slug_or": ["react-native", "swift", "kotlin"],
+        "job_filters": {
+          "job_title_pattern_or": ["Mobile Engineer", "iOS Engineer", "Android Engineer"]
+        }
+      }
+    }
+  ]
+}
