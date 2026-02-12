@@ -13,5 +13,5 @@ export const STARTUP_TIMEOUT_MS = 180_000;
  * Can be overridden via R2_BUCKET_NAME env var for test isolation.
  */
 export function getR2BucketName(env?: { R2_BUCKET_NAME?: string }): string {
-  return env?.R2_BUCKET_NAME || 'moltbot-data';
+  return env?.R2_BUCKET_NAME || 'marketing-bot-data';
 }

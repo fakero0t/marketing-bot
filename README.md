@@ -194,7 +194,7 @@ By default, moltbot data (configs, paired devices, conversation history) is lost
 1. Go to **R2** > **Overview** in the [Cloudflare Dashboard](https://dash.cloudflare.com/)
 2. Click **Manage R2 API Tokens**
 3. Create a new token with **Object Read & Write** permissions
-4. Select the `moltbot-data` bucket (created automatically on first deploy)
+4. Select the `marketing-bot-data` bucket (created automatically on first deploy)
 5. Copy the **Access Key ID** and **Secret Access Key**
 
 ### 2. Set Secrets

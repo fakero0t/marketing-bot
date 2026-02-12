@@ -127,7 +127,7 @@ verify marker file reached R2
 %require
 ===
 WORKER_URL=$(cat "$CCTR_FIXTURE_DIR/worker-url.txt")
-BUCKET=$(cat "$CCTR_FIXTURE_DIR/r2-bucket-name.txt" 2>/dev/null || echo "moltbot-data")
+BUCKET=$(cat "$CCTR_FIXTURE_DIR/r2-bucket-name.txt" 2>/dev/null || echo "marketing-bot-data")
 ./curl-auth -s "$WORKER_URL/debug/cli?cmd=rclone+ls+r2:${BUCKET}/workspace/e2e-marker.txt" | jq .
 ---
 {{ result: json object }}
@@ -140,7 +140,7 @@ verify config reached R2
 %require
 ===
 WORKER_URL=$(cat "$CCTR_FIXTURE_DIR/worker-url.txt")
-BUCKET=$(cat "$CCTR_FIXTURE_DIR/r2-bucket-name.txt" 2>/dev/null || echo "moltbot-data")
+BUCKET=$(cat "$CCTR_FIXTURE_DIR/r2-bucket-name.txt" 2>/dev/null || echo "marketing-bot-data")
 ./curl-auth -s "$WORKER_URL/debug/cli?cmd=rclone+ls+r2:${BUCKET}/openclaw/openclaw.json" | jq .
 ---
 {{ result: json object }}
